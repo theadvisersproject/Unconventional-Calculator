@@ -28,14 +28,14 @@
  function multiply(){
    const enteredNumber = getUserNumberInput();
    const initialResult = currentResult;
-   currentResult = currentResult - enteredNumber;
+   currentResult = currentResult * enteredNumber;
    createAndWriteLog('*', initialResult, enteredNumber);
  }
 
  function divide() {
    const enteredNumber = getUserNumberInput();
    const initialResult = currentResult;
-   currentResult = currentResult - enteredNumber;
+   currentResult = currentResult / enteredNumber;
    createAndWriteLog('/', initialResult, enteredNumber);
  }
 
