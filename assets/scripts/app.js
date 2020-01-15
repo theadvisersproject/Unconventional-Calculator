@@ -41,6 +41,10 @@
 
  
  addBtn.addEventListener('click', add);
+ subtractBtn.addEventListener('click',substract);
+ multiplyBtn.addEventListener('click',multiply);
+ divideBtn.addEventListener('click',divide);
+
 
   
 
