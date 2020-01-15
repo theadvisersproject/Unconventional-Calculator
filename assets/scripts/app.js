@@ -7,27 +7,37 @@
 
  function createAndWriteLog(operators, resultBeforeCalc, calcNumber){
    const calcDescription = `${resultBeforeCalc} ${operators} ${calcNumber}`;
-
+   outputResult(currentResult, calcDescription);
  }
  
  
  function add(){
    const enteredNumber = getUserNumberInput();
-   
+   const initialResult = currentResult;
    currentResult = currentResult + enteredNumber;
-   outputResult(currentResult, calcDescription);
+   createAndWriteLog('+', initialResult, enteredNumber);
  }
 
  function substract(){
    const enteredNumber = getUserNumberInput();
-   const calcDescription = `${currentResult} - ${enteredNumber}`;
+   const initialResult = currentResult;
    currentResult = currentResult - enteredNumber;
-   outputResult(currentResult, calcDescription);
+   createAndWriteLog('-', initialResult, enteredNumber);
  }
 
- function multiply(){}
+ function multiply(){
+   const enteredNumber = getUserNumberInput();
+   const initialResult = currentResult;
+   currentResult = currentResult - enteredNumber;
+   createAndWriteLog('*', initialResult, enteredNumber);
+ }
 
- function divide() {}
+ function divide() {
+   const enteredNumber = getUserNumberInput();
+   const initialResult = currentResult;
+   currentResult = currentResult - enteredNumber;
+   createAndWriteLog('/', initialResult, enteredNumber);
+ }
 
  
  addBtn.addEventListener('click', add);
