@@ -1,12 +1,13 @@
  const defaultValue = 0;
  let currentResult = defaultValue;
 
- currentResult = currentResult + 50;
-
- let calculationDescription = '(' + defaultValue + '+10)';
-
- outputResult(currentResult, calculationDescription);
-
- //1:38:00
+ function add(){
+   const calcDescription = `${currentResult} + ${userInput.value}`;
+   currentResult = currentResult + parseInt(userInput.value);//memorization: .toString() used to convert number into a string.
+   outputResult(currentResult, calcDescription);
+ }
  
+ addBtn.addEventListener('click', add);
+
+  
 
