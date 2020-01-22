@@ -6,8 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Unconventional Calculator</title>
     <link rel="stylesheet" href="assets/styles/app.css" />
-    
-
+    <!-- async can be used in place of defer but it'll not wait for HTML code to be parsed -->
+    <script type="text/javascript" src="assets/scripts/vendor.js" defer></script>
+    <script type="text/javascript" src="assets/scripts/app.js" defer></script>
 </head>
 <body>
     <header>
@@ -28,7 +29,6 @@
         <h2 id="current-calculation">0</h2>
         <h2>Result: <span id="current-result">0</span></h2>
     </section>
-    <script type="text/javascript" src="assets/scripts/vendor.js"></script>
-    <script type="text/javascript" src="assets/scripts/app.js"></script>
+    
 </body>
 </html>
