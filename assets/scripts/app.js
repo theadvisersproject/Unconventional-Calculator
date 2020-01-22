@@ -10,20 +10,20 @@
  //generates and writes calculation log
  function createAndWriteLog(operators, resultBeforeCalc, calcNumber) {
    const calcDescription = `${resultBeforeCalc} ${operators} ${calcNumber}`;
-   outputResult(currentResult, calcDescription); //from vendor.js
+   outputResult(currentResult, calcDescription); //vendor file
  }
 
  //writing log entries using object
- function writeToLog(operationIdentifier, prevResult, operationNumber, newResult){
-  const logEntry = {
-    operation: operationIdentifier,
-    prevResult: prevResult,
-    number:operationNumber,
-    result: newResult
-  };
+ function writeToLog(operationIdentifier, prevResult, operationNumber, newResult) {
+   const logEntry = {
+     operation: operationIdentifier,
+     prevResult: prevResult,
+     number: operationNumber,
+     result: newResult
+   };
 
-  logEntries.push(logEntry);
-  console.log(logEntries);
+   logEntries.push(logEntry);
+   console.log(logEntries);
  }
 
 
