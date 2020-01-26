@@ -5,6 +5,7 @@
  //gets into from input field.
  function getUserNumberInput() {
    return parseInt(userInput.value);
+
  }
 
  //generates and writes calculation log
@@ -26,37 +27,43 @@
    console.log(logEntries);
  }
 
-
- function add() {
+ function calculateResults(calculationType) {
    const enteredNumber = getUserNumberInput();
    const initialResult = currentResult;
-   currentResult += enteredNumber;
-   createAndWriteLog('+', initialResult, enteredNumber);
-   writeToLog('ADD', initialResult, enteredNumber, currentResult);
+   let mathOperator;
+   if (calculationType === 'ADD') {
+     currentResult += enteredNumber;
+     mathOperator = '+';
+   } else if (calculationType === 'SUBSTRACT'){
+     currentResult -= enteredNumber;
+     mathOperator = '-';
+   } else if (calculationType === 'DIVIDE') {
+    currentResult /= enteredNumber;
+    mathOperator = '/';
+   } else if (calculationType === 'MULTIPLY') {
+    currentResult *= enteredNumber;
+    mathOperator = '*';
+   }
+
+   createAndWriteLog(mathOperator, initialResult, enteredNumber);
+   writeToLog(calculationType, initialResult, enteredNumber, currentResult);
+ }
+
+
+ function add() {
+   calculateResults('ADD');
  }
 
  function substract() {
-   const enteredNumber = getUserNumberInput();
-   const initialResult = currentResult;
-   currentResult -= enteredNumber;
-   createAndWriteLog('-', initialResult, enteredNumber);
-   writeToLog('SUBSTRACT', initialResult, enteredNumber, currentResult);
+  calculateResults('SUBSTRACT');
  }
 
  function multiply() {
-   const enteredNumber = getUserNumberInput();
-   const initialResult = currentResult;
-   currentResult *= enteredNumber;
-   createAndWriteLog('*', initialResult, enteredNumber);
-   writeToLog('MULTIPLY', initialResult, enteredNumber, currentResult);
+  calculateResults('MULTIPLY');
  }
 
  function divide() {
-   const enteredNumber = getUserNumberInput();
-   const initialResult = currentResult;
-   currentResult /= enteredNumber;
-   createAndWriteLog('/', initialResult, enteredNumber);
-   writeToLog('DIVIDE', initialResult, enteredNumber, currentResult);
+  calculateResults('DIVIDE');
  }
 
 
