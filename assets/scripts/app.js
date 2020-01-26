@@ -31,7 +31,7 @@
    const enteredNumber = getUserNumberInput();
    const initialResult = currentResult;
    let mathOperator;
-   if (calculationType !== 'ADD' && calculationType !== 'SUBSTRACT' && calculationType !== 'DIVIDE' && calculationType !== 'MULTIPLY') {
+   if (calculationType !== 'ADD' && calculationType !== 'SUBSTRACT' && calculationType !== 'DIVIDE' && calculationType !== 'MULTIPLY' || !enteredNumber ) {
      return;
    }
 
